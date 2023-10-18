@@ -35,20 +35,32 @@ int main(void) {
 			printf("\n");
 			}
 		}
-		//¾Æ·¡ »ï°¢Çü
-		for (i = 0; i < (ag + 1) / 2 - 1; i++) {
-			for (j = 0; j <= i; j++) {
+		//¾Æ·¡ »ï°¢Çü£¨¿©±â¡¡¹®Á¦¡¡»ý±è£©
+		/*for (i = 1; i < (ag + 1) / 2; i++) {
+			for (j = 1; j <= i; j++) {
 				printf(" ");
 			}
-			if (i == (ag+1)/2-2) {
+			if (i == (ag+1)/2-1) {
 				printf("*");
 			}
-			else {
+			else
+			{
 				printf("*");
-				for (j = (ag + 1) / 2 - 1; j >= (i + 1) * 2 - 1; j--) {
+				for (j = i; j <= (ag + 1) / 2 + 1; j++) {
 					printf(" ");
 				}
 				printf("*");
+			}
+			printf("\n");
+		}*/
+		for (i = 1; i <= (ag+1)/2-1; i++) {
+			for (j = 1; j <= ag; j++) {
+				if (i + j == ag || i == j - 1) {
+				printf("*");
+				}
+				else {
+					printf(" ");
+				}
 			}
 			printf("\n");
 		}
